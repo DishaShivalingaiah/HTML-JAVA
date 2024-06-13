@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>JAVA</h1>
+<h1 id="web">WEB</h1>
+<h1>SQL</h1>
+<h1 id="apti">APTI</h1>
+
+<button onclick="aptitude()">Apti</button>
+<button onclick="webtechnology()">WEB</button>
+
+<script>
+function aptitude()
+{
+    let h1 = document.querySelector("#apti")
+    h1.style.backgroundColor="green"
+}
+
+
+function webtechnology()
+{
+      let h1 =   document.querySelector("#web")
+      h1.style.backgroundColor="darkgoldenrod"
+      h1.style.border="2px solid red"
+}
+
+
+
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<img id="photo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZVXxXeGnC8GVmPpPjbmC1RmDwaO_cAwI-NXYKcpfxyJBb0j-YXPh0ffpj5dX0kWSc_6xvEgu95bAlVd-DdFuTW7nMU3SP2OTBjmRMLwl8l47SZx7x2-M80J2KzxlGlw/s220/SHANKAR.jpg" alt="">
+
+<button onclick="size()">SIZE</button>
+
+
+<script>
+function size()
+{   
+    let img = document.querySelector("#photo")
+    img.style.height="100px"
+    img.style.width="100px"
+    img.style.borderRadius="50%"
+    img.style.border="10px solid black"
+    
+}
+
+</script>
+</body>
+</html>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<img id="photo" src="https://qph.cf2.quoracdn.net/main-qimg-f6bcacabffd09f4e7b5dfdd97f8db6e0-lq" alt="">
+  <button onclick="show()">SHOW</button>  
+  <button onclick="hide()">HIDE</button>
+
+
+  <script>
+
+    var img = document.querySelector("#photo")
+    function hide()
+    {
+        img.style.display="none"
+    }
+
+    function show()
+    {
+        img.style.display="block"
+    }
+  </script>
+</body>
+</html>
+
+
+

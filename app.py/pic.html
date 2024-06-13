@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="HELLO" src="https://th.bing.com/th/id/OIP.PPtPcvhCin5pOcIK9lwWlgAAAA?rs=1&pid=ImgDetMain" alt="">
+<button onclick="pic()">SIZE decrease</button>
+<button onclick="fic()">SIZE increase</button>
+<script>
+    function pic()
+    {
+     let img= document.querySelector("#HELLO")
+     img.style.height="50px"
+     img.style.width="50px"
+    img.style.border="2px solid black"
+    img.style.display="block"
+    }
+    function fic()
+    {
+     let img= document.querySelector("#HELLO")
+     img.style.height="300px"
+     img.style.width="300px"
+    img.style.border="2px solid black"
+    img.style.display="none"
+    }
+</script>
+</body>
+</html>

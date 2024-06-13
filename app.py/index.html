@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Demo</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chatbox { width: 100%; max-width: 600px; margin: 0 auto; }
+        #messages { list-style-type: none; padding: 0; }
+        #messages li { padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; }
+        #input { width: calc(100% - 60px); padding: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Chatbot Demo</h1>
+    <div id="chatbox">
+        <ul id="messages"></ul>
+    </div>
+    <input id="input" autocomplete="off" /><button onclick="sendMessage()">Send</button>
+
+    <script>
+        var socket = io();
+
+        function sendMessage() {
+            var input = document.getElementById('input').value;
+            socket.send(input);
+            document.getElementById('input').value = '';
+        }
+
+        socket.on('message', function(msg) {
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(msg));
+            document.getElementById('messages').appendChild(li);
+        });
+    </script>
+</body>
+</html>
